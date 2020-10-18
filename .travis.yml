@@ -22,14 +22,14 @@ after_success:
     - docker push eduarcos/multi-server
     - docker push eduarcos/multi-worker
 
-deploy:
-    provide: elasticbeanstalk
-    region: eu-central-1
-    app: multi-docker
-    env: MultiDocker-env
-    bucket_name: elasticbeanstalk-eu-central-1-820661781237
-    bucket_path: docker-multi
-    on:
-        branch: master
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
+# deploy:
+#     provide: elasticbeanstalk
+#     region: eu-central-1
+#     app: multi-docker
+#     env: MultiDocker-env
+#     bucket_name: elasticbeanstalk-eu-central-1-820661781237
+#     bucket_path: docker-multi
+#     on:
+#         branch: master
+#     access_key_id: $AWS_ACCESS_KEY
+#     secret_access_key: $AWS_SECRET_KEY
